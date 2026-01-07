@@ -525,18 +525,19 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
     background-color: #25D366;
-    border-radius: 50%;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
     z-index: 999;
     text-decoration: none;
     transition: all 0.3s ease;
     animation: pulse-float 2s ease-in-out infinite, bounce-in 0.6s ease-out;
+    min-width: auto;
 }
 
 .floating-whatsapp::before {
@@ -544,7 +545,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 30px;
     background-color: #25D366;
     opacity: 0.6;
     animation: ripple 2s ease-out infinite;
@@ -552,7 +553,7 @@ body {
 
 .floating-whatsapp:hover,
 .floating-whatsapp:focus {
-    transform: scale(1.15);
+    transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(37, 211, 102, 0.6);
     outline: 2px solid #25D366;
     outline-offset: 2px;
@@ -560,10 +561,202 @@ body {
 }
 
 .whatsapp-icon {
-    font-size: 28px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #FFFFFF;
 }
 
-/* Responsive Design */
+.whatsapp-text {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Responsive Design - Mobile First */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .header {
+        padding: 12px 0;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .btn-whatsapp-header {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+
+    .trust-badges {
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+    }
+
+    .trust-bar {
+        padding: 24px 0;
+        margin-bottom: 40px;
+    }
+
+    .trust-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .trust-icon {
+        font-size: 24px;
+    }
+
+    .trust-text {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 24px;
+    }
+
+    .service-icon {
+        font-size: 40px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .how-it-works {
+        padding: 40px 0;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .testimonials {
+        padding: 40px 0;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .final-cta {
+        padding: 60px 0;
+    }
+
+    .final-cta h2 {
+        font-size: 28px;
+    }
+
+    .final-cta p {
+        font-size: 16px;
+    }
+
+    .guardia-banner {
+        padding: 30px 0;
+        margin-bottom: 40px;
+    }
+
+    .guardia-content {
+        gap: 16px;
+    }
+
+    .guardia-icon {
+        font-size: 36px;
+    }
+
+    .guardia-text h3 {
+        font-size: 22px;
+    }
+
+    .guardia-text p {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 40px 0 16px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .floating-whatsapp {
+        bottom: 16px;
+        right: 16px;
+        padding: 10px 16px;
+    }
+
+    .whatsapp-text {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (min-width: 768px) {
     .hero-content {
         grid-template-columns: 1fr 1fr;
