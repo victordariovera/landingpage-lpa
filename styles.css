@@ -596,7 +596,7 @@ body {
     }
 
     .logo {
-        height: 40px;
+        height: 80px;
         width: auto;
         max-width: calc(33% - 4px);
         object-fit: contain;
